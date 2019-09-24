@@ -203,7 +203,7 @@ temperature_control.hotend.set_m_code        104              # 设置温度的M
 
 temperature_control.hotend.set_and_wait_m_code 109            # 设置并且等待温度达到目标的M-code
 
-temperature_control.hotend.designator        T0                # 这个模块的名称
+temperature_control.hotend.designator        T                # 这个模块的名称
 
 #temperature_control.hotend.max_temp         300              # 最大温度，默认为300
 
