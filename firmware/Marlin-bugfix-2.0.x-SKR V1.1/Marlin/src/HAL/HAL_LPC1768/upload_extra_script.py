@@ -13,10 +13,10 @@ current_OS = platform.system()
 Import("env")
 
 def detect_error(e):
-    print '\nUnable to find destination disk (' + e + ')\n' \
+    print ('\nUnable to find destination disk (' + e + ')\n' \
           'Please select it in platformio.ini using the upload_port keyword ' \
           '(https://docs.platformio.org/en/latest/projectconf/section_env_upload.html)\n' \
-          'or copy the firmware (.pioenvs/' + env.get('PIOENV') + '/firmware.bin) manually to the appropriate disk\n'
+          'or copy the firmware (.pioenvs/' + env.get('PIOENV') + '/firmware.bin) manually to the appropriate disk\n')
 
 try:
     if current_OS == 'Windows':
@@ -63,7 +63,7 @@ try:
             env.Replace(
                 UPLOAD_PORT=upload_disk
             )
-            print 'upload disk: ', upload_disk
+            print ('upload disk: ', upload_disk)
         else:
             detect_error('Autodetect Error')
 
@@ -100,7 +100,7 @@ try:
                 UPLOAD_FLAGS="-P$UPLOAD_PORT",
                 UPLOAD_PORT=upload_disk
             )
-            print 'upload disk: ', upload_disk
+            print ('upload disk: ', upload_disk)
         else:
             detect_error('Autodetect Error')
 
@@ -133,7 +133,7 @@ try:
             env.Replace(
                 UPLOAD_PORT=upload_disk
             )
-            print '\nupload disk: ', upload_disk, '\n'
+            print ('\nupload disk: ', upload_disk, '\n')
         else:
             detect_error('Autodetect Error')
 
