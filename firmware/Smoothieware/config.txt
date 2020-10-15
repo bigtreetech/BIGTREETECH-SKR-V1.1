@@ -531,7 +531,9 @@ network.telnet.enable                        false             # Enable the teln
 network.ip_address                           false             # Use dhcp to get ip address
 
 
+leds_disable                                 true
 
+play_led_disable                             true
 
 
 ## System configuration
